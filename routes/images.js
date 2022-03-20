@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/",(req,res) => {
-  res.json({Status:"Up and running."})
+  res.json({images:"Up and running."})
 })
 
 module.exports = router;
