@@ -2,15 +2,16 @@ import React from 'react';
 import './Button.css'
 
 
-const Button = ({content,direction}) => { 
+const Button = ({content,direction,action}) => { 
+
 
 return(
 
-<buttons className='Button'>
-{direction && <i class={`fa fa-chevron-${direction}`}  
+<button className='Button' onClick={action}>
+{direction && <i className={`fa fa-chevron-${direction}`}  
 style={{order:`${direction === 'left' ? 0 : 1}`}}></i>}
 {content}
-</buttons>
+</button>
 
 )
 }

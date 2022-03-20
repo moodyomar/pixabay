@@ -1,14 +1,16 @@
-import React from 'react';
-import { Card } from '../../components';
-
+import React, { useState } from 'react';
+import { Card, Modal } from '../../components';
+import {useSelector} from 'react-redux'
 
 const Photos = () => { 
 
 const test = [1,2,3,4,5,6,7,8,9]
+const showModal = useSelector(state => state.pixaReducer.showModal)
 
+console.log(showModal);
 return(
-
 <div className='Photos' style={PhotosLayout}>
+{ showModal && <Modal/> }
 {test.map(t => <Card/>)}
 </div>
 

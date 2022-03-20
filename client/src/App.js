@@ -1,5 +1,5 @@
 import './App.css';
-import { Header, Navbar ,Footer,Modal } from './components'
+import { Header, Navbar ,Footer } from './components'
 import { Buttons,Photos } from './containers'
 
 function App() {
@@ -11,7 +11,6 @@ function App() {
       </header>
       <main>
         <Buttons/>
-        <Modal/>
         <Photos />
       </main>
       <footer>
