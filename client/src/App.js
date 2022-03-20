@@ -1,5 +1,5 @@
 import './App.css';
-import { Header, Navbar } from './components'
+import { Header, Navbar ,Footer } from './components'
 import { Buttons,Photos } from './containers'
 
 function App() {
@@ -13,6 +13,9 @@ function App() {
         <Buttons/>
         <Photos />
       </main>
+      <footer>
+        <Footer/>
+      </footer>
     </div>
   );
 }

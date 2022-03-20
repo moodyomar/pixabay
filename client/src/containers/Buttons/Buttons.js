@@ -7,9 +7,9 @@ const Buttons = () => {
 return(
 
     <div style={buttonsLayout}>
-    <Button />
-    <Button />
-    <Button />
+    <Button content={'Prev'} direction={'left'} />
+    <Button content={'Categories'}/>
+    <Button content={'Next'} direction={'right'}/>
     </div>
 
 )
