@@ -1,0 +1,6 @@
+.Header{
+    width: 100vw;
+    height: 450px;
+    background-image: url(https://picsum.photos/1800/450);
+    background-size: cover;
+}
