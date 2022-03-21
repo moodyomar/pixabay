@@ -1,15 +1,15 @@
 import React from 'react';
 import { Button } from '../../components';
-
+import { openModal,nextPhotos,prevPhotos } from '../../store/actions';
 
 const Buttons = () => { 
 
 return(
 
     <div style={buttonsLayout}>
-    <Button content={'Prev'} direction={'left'} />
-    <Button content={'Categories'}/>
-    <Button content={'Next'} direction={'right'}/>
+    <Button content={'Prev'} direction={'left'} action={prevPhotos()} />
+    <Button content={'Categories'} action={openModal()}/>
+    <Button content={'Next'} direction={'right'} action={nextPhotos()}/>
     </div>
 
 )

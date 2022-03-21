@@ -13,10 +13,10 @@ return(
 
 <div className='modal-container'>
 <div className="Modal">
-   <div onClick={() => dispatch(closeModal())} className="close-btn"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+   <div onClick={() => dispatch(closeModal())} className="close-btn"><i className="fa fa-times-circle" aria-hidden="true"></i></div>
    <h1>Select a desired category</h1>
-   <select name="categories">
-       {categories.map(cat => <option value={cat}>{cat}</option>)}
+   <select name="categories" defaultValue={'Select'} onChange={e => console.log(e.target.value)}>
+       {categories.map(cat => <option key={cat} value={cat}>{cat}</option>)}
    </select>
 </div>
 </div>

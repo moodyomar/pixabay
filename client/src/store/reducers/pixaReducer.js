@@ -1,5 +1,5 @@
 const initState = {
-    showModal:true,
+    showModal:false,
     photos:[
     ]
   }
