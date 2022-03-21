@@ -8,9 +8,9 @@ export const openModal = () => {
       return {type:"OPEN_MODAL"}
     }
     
-export const getPhotos = () => async dispatch => {
+export const getPhotos = (cat='',p=1) => async dispatch => {
       try {
-        const response = await axios.get('/images')
+        const response = await axios.get(`/images?cat=${cat}&p=${p}`)
         dispatch({
           type:"GET_PHOTOS",
           payload:response.data
@@ -18,6 +18,10 @@ export const getPhotos = () => async dispatch => {
       } catch (error) {
         console.log(error);
       }
+    }
+
+export const changeCategory = (cat) => {
+      return {type:"CHANGE_CATEGORY",payload:cat}
     }
 
 export const nextPhotos = () => {

@@ -13,4 +13,5 @@ margin-bottom: 50px;
 .Card:hover{
     transition: all .3s ease-out;
     cursor: pointer;
+    transform: scale(1.02);
 }
