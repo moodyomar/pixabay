@@ -12,6 +12,7 @@ function App() {
       <main>
         <Buttons/>
         <Photos />
+        <Buttons/>
       </main>
       <footer>
         <Footer/>
