@@ -1,28 +1,25 @@
 import React, { useEffect } from 'react';
 import { Card, Modal } from '../../components';
-import {useSelector} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux'
+import { getPhotos } from '../../store/actions';
 
 const Photos = () => { 
 
 const test = [1,2,3,4,5,6,7,8,9]
-const showModal = useSelector(state => state.pixaReducer.showModal)
+const {showModal,photos} = useSelector(state => state.pixaReducer)
+
+const dispatch = useDispatch();
 
 useEffect(() => {
-apiRequest();
+dispatch(getPhotos());
 },[])
 
-const apiRequest = () => {
-    fetch('/images')
-.then(res => console.log(res))
-.catch(err => console.log(err))
-}
 
 return(
 <div className='Photos' style={PhotosLayout}>
 { showModal && <Modal/> }
-{test.map(t => <Card/>)}
+{photos.map(photo => <Card key={photo.id} imgUrl={photo.webformatURL} />)}
 </div>
-
 )
 }
 

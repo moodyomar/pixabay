@@ -1,7 +1,8 @@
 const initState = {
     showModal:false,
-    photos:[
-    ]
+    currentCategory:'',
+    loading:true,
+    photos:[]
   }
   
   export const pixaReducer = (state = initState, action) => {
@@ -12,6 +13,9 @@ const initState = {
   
     case "OPEN_MODAL":
     return {...state,showModal:true}
+
+    case "GET_PHOTOS":
+    return {...state,photos:action.payload,loading:false}
       
       default:
         return state

@@ -2,11 +2,11 @@ import React from 'react';
 import './Card.css'
 
 
-const Card = () => { 
+const Card = ({imgUrl}) => { 
 
 return(
 
-<div style={{backgroundImage:'url(https://picsum.photos/450)'}} className='Card'>
+<div style={{backgroundImage:`url(${imgUrl}`}} className='Card'>
 </div>
 
 )
