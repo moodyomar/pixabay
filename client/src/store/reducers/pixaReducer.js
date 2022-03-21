@@ -25,7 +25,7 @@ const initState = {
     return {...state,page:state.page+1}
 
     case "PREV_PHOTOS":
-    return {...state,page:state.page-1}
+    return {...state,page:state.page > 1 ? state.page-1 : state.page}
       
       default:
         return state
