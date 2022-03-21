@@ -6,14 +6,13 @@ import spinner from '../../assets/spinner.gif'
 
 const Photos = () => { 
 
-const test = [1,2,3,4,5,6,7,8,9]
 const {showModal,photos,loading,category,page} = useSelector(state => state.pixaReducer)
 
 const dispatch = useDispatch();
 
 useEffect(() => {
 dispatch(getPhotos(category,page));
-},[category,page])
+},[category,page,dispatch])
 
 
 return(
@@ -22,8 +21,7 @@ return(
 
 {loading 
  ? <img src={spinner} alt="Loading" style={{margin: 'auto'}} />
- : photos.map(photo => <Card key={photo.id} imgUrl={photo.webformatURL} />)}
-
+ : photos.map(img => <Card key={img.id} img={img}/>)}
 </div>
 )
 }

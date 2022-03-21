@@ -16,3 +16,11 @@ background: #292A2B;
 transition: all .3s ease-out;
 transform: scale(1.02);
 }
+
+@media screen and (max-width: 800px) {
+    .Button{
+        width: 100px;
+        height: 50px;
+        font-size: 1rem;
+    }
+  }

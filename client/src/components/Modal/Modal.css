@@ -7,14 +7,14 @@
 .Modal{
 position: relative;
 z-index: 2;
-background-color: rgba(255, 255, 255, 0.3);
+background-color: rgba(0, 0, 0, 0.2);
 backdrop-filter: blur(5px);
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
 width: 600px;
-height: 350px;
+height: 250px;
 padding: 20px 50px;
 border-radius: 30px;
 box-shadow: inset 3px 3px 15px rgba(0, 0, 0, 0.2);
@@ -43,3 +43,14 @@ select{
 .Modal h1{
     text-shadow: 5px 8px 6px rgba(0, 0, 0, 0.25);
 }
+
+@media screen and (max-width: 600px) {
+    .Modal{
+        width: 350px;
+        height: 250px;
+        padding: 20px 50px;
+        }
+        .Modal h1{
+            font-size: 1.4rem;
+        }
+  }
